@@ -1,0 +1,33 @@
+mixin nav(className, items, activeItem)
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
+      each item, ndx in items 
+          li(class=`${className}__item ` + ( (ndx === activeItem) ? `${className}__item_active` : ''))
+            a(class=`${className}__link` href= item.href)
+              i(class=`fa fa-${item.icon} ${className}__link-icon`)
+              span(class=`${className}__link-title`)= item.title
+
+mixin career(className, careerList)
+  ul(class=`${className}__list`)
+    each item in careerList
+      li(class=`${className}__item`)
+        div(class=`${className}__block`)
+          div(class=`${className}__title`)= item.place
+          div(class=`${className}__occ`)= item.occupation
+          div(class=`${className}__time`)= item.time
+          div(class=`${className}__year`)= item.year
+
+mixin worksList(className, worksList)
+  ul(class=`${className}__list`)
+    each work in worksList
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href="")
+          .works__img
+            img(class=`${className}__img-pic` src= work.imageSrc, alt="")
+          .works__desc
+            h2(class=`${className}__title`)= work.title
+            div(class=`${className}__about`)= work.info
+            div(class=`${className}__type`)
+              i(class=`fa fa-${work.icon} ${className}__type-icon`)
+              div(class=`${className}__type-name`)= work.type
+

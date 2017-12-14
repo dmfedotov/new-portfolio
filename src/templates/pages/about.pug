@@ -1,0 +1,12 @@
+extends ../template
+
+block title 
+  title Обо мне
+
+block content
+  include ../sections/header
+  include ../sections/sidebar
+  block nav
+    +nav("nav", items, 0)
+  include ../sections/about-content
+  include ../sections/footer
