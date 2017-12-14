@@ -1,0 +1,12 @@
+extends ../template
+
+block title
+  title Портфолио
+
+block content
+  include ../sections/header
+  include ../sections/sidebar
+  block nav
+    +nav("nav", items, 2)
+  include ../sections/portfolio-content
+  include ../sections/footer

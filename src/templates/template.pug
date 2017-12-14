@@ -1,0 +1,15 @@
+include ./common/_variables
+include ./common/_mixins
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    block title
+      title Добро пожаловать
+    link(rel='stylesheet' href='assets/styles/app.min.css')
+
+  body
+    block content

@@ -1,0 +1,12 @@
+extends ../template
+
+block title
+  title Карьерный путь
+
+block content
+  include ../sections/header
+  include ../sections/sidebar
+  block nav
+    +nav("nav", items, 1)
+  include ../sections/career-content
+  include ../sections/footer

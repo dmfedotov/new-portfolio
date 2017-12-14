@@ -1,18 +1,18 @@
-const gulp = require('gulp');
-const del = require('del');
-const browserSync = require('browser-sync').create();
-const pug = require('gulp-pug');
+const gulp         = require('gulp');
+const del          = require('del');
+const browserSync  = require('browser-sync').create();
+const pug          = require('gulp-pug');
 const autoprefixer = require('gulp-autoprefixer');
-const svgSprite = require('gulp-svg-sprites');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
+const svgSprite    = require('gulp-svg-sprites');
+const svgmin       = require('gulp-svgmin');
+const cheerio      = require('gulp-cheerio');
+const replace      = require('gulp-replace');
 const plumber      = require("gulp-plumber");
 const notify       = require("gulp-notify")
 
 // styles 
-const sass = require('gulp-sass');
-const rename = require('gulp-rename');
+const sass       = require('gulp-sass');
+const rename     = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
@@ -48,7 +48,7 @@ function html() {
   return gulp.src(paths.templates.src + "pages/*.pug")
     .pipe(plumber({
       errorHandler: notify.onError(function (err) {
-        return {title: "Style", message: err.message}
+        return {title: "Html", message: err.message}
       })
     }))
     .pipe(pug({
@@ -99,7 +99,6 @@ function clean() {
 
 // следим за src и запускаем нужные таски (компиляция и пр.)
 function watch() {
-  gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.templates.src, html);
   gulp.watch(paths.images.src, images);
@@ -144,19 +143,20 @@ function sprite() {
 }
 
 // экспорт функций для доступа из терминала
-exports.clean = clean;
+exports.clean  = clean;
 exports.styles = styles;
-exports.scripts = scripts;
-exports.html = html;
+
+// exports.scripts = scripts;
+exports.html   = html;
 exports.images = images;
-exports.watch = watch;
+exports.watch  = watch;
 exports.server = server;
-exports.fonts = fonts;
+exports.fonts  = fonts;
 exports.sprite = sprite;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, scripts, html, images, fonts),
+  gulp.parallel(styles, html, images, fonts),
   gulp.parallel(watch, server)
 ));
