@@ -39,6 +39,12 @@ h6 {
   font-weight: normal;
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 960px;
   max-width: 940px;

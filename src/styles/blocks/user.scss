@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.user__photo {
+  width: 60px;
+  overflow: hidden;
+
+  border: 2px solid #d1d1d1;
+  border-radius: 50%;
+}
+

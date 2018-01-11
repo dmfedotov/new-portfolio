@@ -10,16 +10,18 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__left">
-          <div class="header__user">
-            <div class="user">
-              <div class="user__photo"><img class="user__photo-pic" src="" alt="Здесь должно быть фото автора"></div>
-              <div class="user__name">Дмитрий Федотов</div>
+        <div class="container header__wrap">
+          <div class="header__left">
+            <div class="header__user">
+              <div class="user">
+                <div class="user__photo"><img class="user__photo-pic img-responsive" src="./assets/images/content/min-avatar.jpg" alt="Здесь должно быть фото автора"></div>
+                <div class="user__name">Дмитрий Федотов</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="header__right">
-          <div class="header__contacts"><a class="contacts-link" href="#">Мои контакты</a></div>
+          <div class="header__right">
+            <div class="header__contacts"><a class="contacts-link" href="#">Мои контакты</a></div>
+          </div>
         </div>
       </header>
       <main class="content container">
@@ -27,9 +29,9 @@
           <div class="sidebar__nav">
             <nav class="nav">
               <ul class="nav__list">
-                <li class="nav__item nav__item_active"><a class="nav__link" href="about.html"><i class="fa fa-user-secret nav__link-icon"></i><span class="nav__link-title">Обо мне</span></a></li>
-                <li class="nav__item "><a class="nav__link" href="career.html"><i class="fa fa-rocket nav__link-icon"></i><span class="nav__link-title">Карьерный путь</span></a></li>
-                <li class="nav__item "><a class="nav__link" href="portfolio.html"><i class="fa fa-briefcase nav__link-icon"></i><span class="nav__link-title">Порфтолио</span></a></li>
+                <li class="nav__item "><a class="nav__link nav__link_active" href="about.html"><i class="fa fa-user-secret nav__link-icon"></i><span class="nav__link-title">Обо мне</span></a></li>
+                <li class="nav__item "><a class="nav__link " href="career.html"><i class="fa fa-rocket nav__link-icon"></i><span class="nav__link-title">Карьерный путь</span></a></li>
+                <li class="nav__item "><a class="nav__link " href="portfolio.html"><i class="fa fa-briefcase nav__link-icon"></i><span class="nav__link-title">Порфтолио</span></a></li>
               </ul>
             </nav>
           </div>
@@ -51,16 +53,18 @@
         </div>
       </main>
       <footer class="footer">
-        <div class="footer__left">
-          <div class="copyright">© Дизайн сайта был разработан в школе LoftSchool</div>
-        </div>
-        <div class="footer__right">
-          <div class="footer__social">
-            <ul class="social">
-              <li class="social__item"><a class="social__link social__link_fb" href=""></a></li>
-              <li class="social__item"><a class="social__link social__link_vk" href=""></a></li>
-              <li class="social__item"><a class="social__link social__link_tw" href=""></a></li>
-            </ul>
+        <div class="container footer__wrap">
+          <div class="footer__left">
+            <div class="copyright">© Дизайн сайта был разработан в школе LoftSchool</div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__social">
+              <ul class="social">
+                <li class="social__item"><a class="social__link social__link_fb" href=""></a></li>
+                <li class="social__item"><a class="social__link social__link_vk" href=""></a></li>
+                <li class="social__item"><a class="social__link social__link_tw" href=""></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>

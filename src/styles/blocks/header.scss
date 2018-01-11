@@ -1,3 +1,33 @@
 .header {
+  padding-top: 10px;
+
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
   grid-area: header;
+}
+
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link {
+  font-weight: 600;
+  color: $cyan;
+  text-decoration: none;
+
+  background: url("../images/decor/border-bottom.png") repeat-x center bottom;
+
+  &:hover {
+    color: $red;
+
+    background: url("../images/decor/border-hover.png") repeat-x center bottom;
+  }
 }

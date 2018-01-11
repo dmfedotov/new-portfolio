@@ -69,10 +69,12 @@ function styles() {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    // .pipe(sourcemaps.write({includeContent: false}))
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(autoprefixer({
+    //   browsers: ['last 2 versions'],
+    //   cascade: false
+    // }))
     .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
