@@ -45,6 +45,15 @@ h6 {
   height: auto;
 }
 
+.content-title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 45px;
+  color: $dark-gray;
+}
+
 .container {
   width: 960px;
   max-width: 940px;
@@ -56,10 +65,9 @@ h6 {
   min-height: 100%;
   overflow: hidden;
 
-  grid-template-areas: 
-    "header"
-    "content"
-    "footer";
+  grid-template-areas: "header"
+  "content"
+  "footer";
   grid-template-columns: 100%;
   grid-template-rows: 80px 1fr 50px;
 }
