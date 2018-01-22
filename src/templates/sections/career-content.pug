@@ -1,6 +1,8 @@
 .career
-  .career__left
-    .career__photo
-      img.career__photo-pic(src="", alt="Фото универа")
-  .career__right
-    +career('career', careerList)
+  h1.content-title.content-title_margin_bottom Карьерный путь
+  .career__wrap
+    .career__left
+      .career__photo
+        img.career__photo-pic.img-responsive(src="assets/images/content/career-pic.jpg", alt="Фото универа")
+    .career__right
+      +career('career', careerList)
