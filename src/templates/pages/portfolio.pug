@@ -4,10 +4,11 @@ block title
   title Портфолио
 
 block content
-  include ../sections/header
-  include ../sections/content
-    block page-content
-      include ../sections/sidebar
-        +nav("nav", items, 2)
-      include ../sections/portfolio-content
-  include ../sections/footer
+  .wrapper
+    include ../sections/header
+    include ../sections/content
+      block page-content
+        include ../sections/sidebar
+          +nav("nav", items, 2)
+        include ../sections/portfolio-content
+    include ../sections/footer

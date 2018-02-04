@@ -7,5 +7,18 @@ header.header
             img.user__photo-pic.img-responsive(src="./assets/images/content/min-avatar.jpg", alt="Здесь должно быть фото автора")
           .user__name Дмитрий Федотов
     .header__right
-      .header__contacts
-        a.contacts-link(href="#") Мои контакты
+      .contacts
+        a.contacts__link(href="#") Мои контакты
+        ul.contacts__dropdown
+          li.contacts__dropdown-item
+            span.contacts__dropdown-link
+              i.fa.fa-envelope.contacts__dropdown-icon
+              span.contacts__dropdown-title crismsfiva@gmail.com
+          li.contacts__dropdown-item
+            span.contacts__dropdown-link
+              i.fa.fa-phone.contacts__dropdown-icon
+              span.contacts__dropdown-title +8 800 555 35 35
+          li.contacts__dropdown-item
+            span.contacts__dropdown-link
+              i.fa.fa-skype.contacts__dropdown-icon
+              span.contacts__dropdown-title qwerty
