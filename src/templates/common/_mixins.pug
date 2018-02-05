@@ -2,8 +2,8 @@ mixin nav(className, items, activeItem)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
       each item, ndx in items 
-          li(class=`${className}__item ` + ( (ndx === activeItem) ? `${className}__item_active` : ''))
-            a(class=`${className}__link` href= item.href)
+          li(class=`${className}__item `)
+            a(class=`${className}__link ` + ( (ndx === activeItem) ? `${className}__link_active` : '') href= item.href)
               i(class=`fa fa-${item.icon} ${className}__link-icon`)
               span(class=`${className}__link-title`)= item.title
 
@@ -18,12 +18,12 @@ mixin career(className, careerList)
           div(class=`${className}__year`)= item.year
 
 mixin worksList(className, worksList)
-  ul(class=`${className}__list`)
+  ul(class=`${className}`)
     each work in worksList
       li(class=`${className}__item`)
         a(class=`${className}__link` href="")
           .works__img
-            img(class=`${className}__img-pic` src= work.imageSrc, alt="")
+            img(class=`${className}__img-pic img-responsive` src= work.imageSrc, alt="")
           .works__desc
             h2(class=`${className}__title`)= work.title
             div(class=`${className}__about`)= work.info

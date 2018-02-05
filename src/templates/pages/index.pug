@@ -1,10 +1,11 @@
 extends ../template
 
 block content
-  .auth
-    .auth__top
-      .auth__avatar
-        img.auth__avatar-pic(src="", alt="Фото автора")
-      .auth__name Дмитрий Федотов
-    .auth__bottom
-      .auth__btn.btn Перейти на сайт
+  .wrapper.wrapper_hello-page
+    .auth
+      .auth__top
+        .auth__avatar
+          img.auth__avatar-pic.img-responsive(src="./assets/images/content/min-avatar.jpg", alt="Фото автора")
+        .auth__name Дмитрий Федотов
+      .auth__bottom
+        a.auth__btn.btn.btn_white(href="about.html") Перейти на сайт

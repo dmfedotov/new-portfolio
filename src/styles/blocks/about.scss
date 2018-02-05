@@ -1,0 +1,64 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+
+  grid-area: main;
+}
+
+.about__left {
+  margin-right: 20px;
+  padding: 0 35px;
+}
+
+.about__photo {
+  width: 220px;
+  overflow: hidden;
+
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.about__content {
+  height: 450px;
+  margin-bottom: 55px;
+  overflow: auto;
+}
+
+.about__content p {
+  margin: 10px 0;
+
+  font-weight: 300;
+  line-height: 26px;
+  color: #646464;
+}
+
+.about__download {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 13px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  color: $red;
+  text-decoration: none;
+
+  border: 2px solid $red;
+  border-radius: 30px;
+  transition: all .3s;
+
+  &:hover {
+    background: $red;
+    color: #fff;
+  }
+}
+
+.btn__icon {
+  margin-right: 10px;
+}

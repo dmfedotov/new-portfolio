@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/icons/sprite.png") no-repeat;
+}
+
+.social__link_fb {
+  background-position: 0px -32px;
+
+  &:hover {
+    background-position: 0px 0px;
+  }
+}
+
+.social__link_vk {
+  background-position: -1px -160px;
+
+  &:hover {
+    background-position: -1px -128px;
+  }
+}
+
+.social__link_tw {
+  background-position: 0px -96px;
+
+  &:hover {
+    background-position: 0px -64px;
+  }
+}

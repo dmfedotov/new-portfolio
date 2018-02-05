@@ -1,0 +1,28 @@
+.nav__link-icon {
+  margin-right: 10px;
+}
+
+.nav__link {
+  display: block;
+  padding: 10px 0;
+  padding-right: 30px;
+
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+  color: $dark-gray;
+  text-decoration: none;
+
+  border-right: 6px solid transparent;
+  transition: color .3s;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+.nav__link_active {
+  font-weight: 600;
+  color: $cyan;
+  border-right: 6px solid $cyan;
+}

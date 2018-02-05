@@ -1,0 +1,114 @@
+.header {
+  padding-top: 10px;
+
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+  grid-area: header;
+}
+
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.contacts {
+  position: relative;
+
+  padding-bottom: 15px;
+
+  &:hover {
+    .contacts__dropdown {
+      left: -70%;
+    }
+  }
+}
+
+.contacts__link {
+  font-weight: 600;
+  color: $cyan;
+  text-decoration: none;
+
+  background: url("../images/decor/border-bottom.png") repeat-x center bottom;
+
+  &:hover {
+    color: $red;
+
+    background: url("../images/decor/border-hover.png") repeat-x center bottom;
+  }
+}
+
+.contacts__dropdown {
+  position: absolute;
+  top: 40px;
+  left: -9999px;
+
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #dedede;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #dedede;
+    border-left: 10px solid transparent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #ffffff;
+    border-left: 10px solid transparent;
+  }
+}
+
+.contacts__dropdown-item {
+  border-bottom: 1px solid #dedede;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.contacts__dropdown-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  cursor: pointer;
+}
+
+.contacts__dropdown-icon {
+  margin-right: 10px;
+
+  font-size: 18px;
+  color: $cyan;
+}
+
+.contacts__dropdown-title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+}

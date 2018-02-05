@@ -9,6 +9,7 @@ const cheerio      = require('gulp-cheerio');
 const replace      = require('gulp-replace');
 const plumber      = require("gulp-plumber");
 const notify       = require("gulp-notify")
+const spritesmith  = require("gulp.spritesmith")
 
 // styles 
 const sass       = require('gulp-sass');
@@ -34,7 +35,7 @@ const paths = {
     dest: 'docs/assets/images/'
   },
   icons: {
-    src: 'src/images/icons/*.svg',
+    src: 'src/images/icons/*.png',
     dest: 'src/images/icons/'
   },
   fonts: {
@@ -69,10 +70,12 @@ function styles() {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    // .pipe(sourcemaps.write({includeContent: false}))
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(autoprefixer({
+    //   browsers: ['last 2 versions'],
+    //   cascade: false
+    // }))
     .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
@@ -142,6 +145,18 @@ function sprite() {
     .pipe(gulp.dest(paths.icons.dest));
 }
 
+// png спрайт
+function pngSprite() {
+  return gulp.src(paths.icons.src)
+    .pipe(spritesmith({
+      imgName: 'sprite.png',
+      cssName: 'sprite.css',
+      padding: 2,
+      algorithm: 'top-down'
+    }))
+    .pipe(gulp.dest(paths.icons.dest));
+}
+
 // экспорт функций для доступа из терминала
 exports.clean  = clean;
 exports.styles = styles;
@@ -153,6 +168,7 @@ exports.watch  = watch;
 exports.server = server;
 exports.fonts  = fonts;
 exports.sprite = sprite;
+exports.pngSprite = pngSprite;
 
 // сборка и слежка
 gulp.task('default', gulp.series(

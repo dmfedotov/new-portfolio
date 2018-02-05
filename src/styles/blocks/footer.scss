@@ -1,0 +1,24 @@
+.footer {
+  background: $dark-gray;
+
+  grid-area: footer;
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer__left,
+.footer__right {
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 40px;
+  color: #9c9c9c;
+}
