@@ -10,9 +10,18 @@
   position: relative;
 
   width: 300px;
+  margin: 0 10px;
 
   border-radius: 10px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+
+@include laptop {
+    width: 355px;
+  }
+
+@include phone {
+    width: 300px;
+  }
 }
 
 .auth__top {
@@ -22,6 +31,10 @@
 
   background: #ffffff;
   border-radius: 10px 10px 0 0;
+
+@include laptop {
+    padding-top: 70px;
+  }
 }
 
 .auth__avatar {
@@ -35,6 +48,10 @@
   border: 2px solid #d7d7d7;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+
+@include laptop {
+    width: 100px;
+  }
 }
 
 .auth__name {
@@ -44,6 +61,10 @@
   line-height: 28px;
   text-align: center;
   color: $dark-gray;
+
+@include laptop {
+    max-width: 175px;
+  }
 }
 
 .auth__bottom {
@@ -66,4 +87,37 @@
 
     background: #ffffff;
   }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+.bounce {
+  animation: bounceIn 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
 }

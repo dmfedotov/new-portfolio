@@ -1,4 +1,6 @@
 .career {
+  padding-bottom: 50px;
+
   grid-area: main;
 }
 
@@ -9,10 +11,20 @@
 .career__wrap {
   display: flex;
   justify-content: space-between;
+
+@include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .career__left {
   margin-right: 20px;
+
+@include tablet {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .career__photo {
@@ -20,11 +32,27 @@
   overflow: hidden;
 
   border-radius: 10px;
+
+@include laptop {
+    width: 225px;
+  }
+
+@include tablet {
+    width: 230px;
+  }
+
+@include phone {
+    width: 220px;
+  }
 }
 
 .career__item {
   margin-bottom: 20px;
   padding-left: 80px;
+
+@include tablet {
+    padding-left: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -45,6 +73,14 @@
   border-radius: 10px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 
+@include laptop {
+    max-width: 355px;
+  }
+
+@include tablet {
+    max-width: initial;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -57,6 +93,10 @@
     margin-right: 16px;
 
     background: #dddddd;
+
+@include tablet {
+      display: none;
+    }
   }
 
   &::after {
@@ -69,6 +109,10 @@
   font-size: 21px;
   line-height: 26px;
   color: #5a5a5a;
+
+@include phone {
+    font-size: 18px;
+  }
 }
 
 .career__occ,
@@ -77,6 +121,10 @@
   font-size: 18px;
   line-height: 26px;
   color: $light-gray;
+
+@include phone {
+    font-size: 16px;
+  }
 }
 
 .career__year {
@@ -88,6 +136,10 @@
   margin-right: 30px;
 
   transform: translateY(-50%);
+
+@include tablet {
+    display: none;
+  }
 
   &::before {
     content: "";

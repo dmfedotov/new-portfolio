@@ -26,7 +26,15 @@
 
   &:hover {
     .contacts__dropdown {
-      left: -70%;
+      left: -110px;
+
+@include laptop {
+        left: -133px;
+      }
+
+@include tablet {
+        left: -193px;
+      }
     }
   }
 }
@@ -38,10 +46,30 @@
 
   background: url("../images/decor/border-bottom.png") repeat-x center bottom;
 
+@include tablet {
+    display: none;
+  }
+
   &:hover {
     color: $red;
 
     background: url("../images/decor/border-hover.png") repeat-x center bottom;
+  }
+}
+
+.contacts__link-icon {
+  display: none;
+
+@include tablet {
+    display: block;
+
+    font-size: 40px;
+    line-height: 28px;
+    color: $cyan;
+  }
+
+  &:hover {
+    color: $red;
   }
 }
 
@@ -104,6 +132,10 @@
 
   font-size: 18px;
   color: $cyan;
+
+@include phone {
+    font-size: 16px;
+  }
 }
 
 .contacts__dropdown-title {
@@ -111,4 +143,8 @@
   font-size: 18px;
   line-height: 28px;
   color: #000000;
+
+@include phone {
+    font-size: 16px;
+  }
 }
