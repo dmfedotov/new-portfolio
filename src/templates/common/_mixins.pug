@@ -25,7 +25,7 @@ mixin worksList(className, worksList)
           .works__img
             img(class=`${className}__img-pic img-responsive` src= work.imageSrc, alt="")
           .works__desc
-            h2(class=`${className}__title`)= work.title
+            h2(class=`${className}__title works__title_hover`)= work.title
             div(class=`${className}__about`)= work.info
             div(class=`${className}__type`)
               i(class=`fa fa-${work.icon} ${className}__type-icon`)
