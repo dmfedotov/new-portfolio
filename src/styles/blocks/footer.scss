@@ -8,6 +8,14 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+@include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
 }
 
 .footer__left,
@@ -16,9 +24,20 @@
   align-items: center;
 }
 
+.footer__left {
+  @include phone {
+    margin-bottom: 10px;
+  }
+}
+
 .copyright {
   font-weight: 300;
   font-size: 14px;
   line-height: 40px;
   color: #9c9c9c;
+
+@include phone {
+    line-height: 21px;
+    text-align: center;
+  }
 }
