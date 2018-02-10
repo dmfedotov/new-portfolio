@@ -16,6 +16,7 @@ const sass       = require('gulp-sass');
 const rename     = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
+// пути
 const paths = {
   root: './docs',
   styles: {
@@ -95,6 +96,12 @@ function fonts() {
     .pipe(gulp.dest(paths.fonts.dest));
 }
 
+// перенос скриптов
+function scripts() {
+  return gulp.src(paths.scripts.src)
+    .pipe(gulp.dest(paths.scripts.dest));
+}
+
 // очистка папки docs
 function clean() {
   return del(paths.root);
@@ -158,21 +165,21 @@ function pngSprite() {
 }
 
 // экспорт функций для доступа из терминала
-exports.clean  = clean;
-exports.styles = styles;
+exports.clean     = clean;
+exports.styles    = styles;
 
-// exports.scripts = scripts;
-exports.html   = html;
-exports.images = images;
-exports.watch  = watch;
-exports.server = server;
-exports.fonts  = fonts;
-exports.sprite = sprite;
+exports.scripts   = scripts;
+exports.html      = html;
+exports.images    = images;
+exports.watch     = watch;
+exports.server    = server;
+exports.fonts     = fonts;
+exports.sprite    = sprite;
 exports.pngSprite = pngSprite;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, html, images, fonts),
+  gulp.parallel(styles, html, images, fonts, scripts),
   gulp.parallel(watch, server)
 ));

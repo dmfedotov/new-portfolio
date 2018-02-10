@@ -7,4 +7,12 @@
   grid-template-columns: 220px 1fr;
   grid-column-gap: 20px;
   padding-top: 25px;
+
+  @include laptop {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+      "sidebar"
+      "main";
+    grid-row-gap: 20px;
+  }
 }

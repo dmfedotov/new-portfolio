@@ -1,5 +1,25 @@
+.nav__list {
+  @include laptop {
+    display: flex;
+  }
+}
+
+.nav__item {
+  @include phone {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .nav__link-icon {
   margin-right: 10px;
+
+@include phone {
+    display: none;
+  }
 }
 
 .nav__link {
@@ -14,7 +34,23 @@
   text-decoration: none;
 
   border-right: 6px solid transparent;
-  transition: color .3s;
+
+  transition: color 0.3s;
+
+@include laptop {
+    border-right: none;
+  }
+
+@include tablet {
+    padding-right: 18px;
+    text-align: center;
+  }
+
+@include phone {
+    padding-right: 0;
+
+    font-size: 14px;
+  }
 
   &:hover {
     color: $cyan;
@@ -24,5 +60,10 @@
 .nav__link_active {
   font-weight: 600;
   color: $cyan;
+
   border-right: 6px solid $cyan;
+
+@include laptop {
+    border-right: none;
+  }
 }

@@ -52,12 +52,34 @@ h6 {
   font-size: 35px;
   line-height: 45px;
   color: $dark-gray;
+
+@include tablet {
+    text-align: center;
+  }
+
+@include phone {
+    margin-bottom: 0;
+  }
 }
 
 .container {
-  width: 960px;
-  max-width: 940px;
+  width: 100%;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 20px;
+
+@include laptop {
+    max-width: 768px;
+  }
+
+@include tablet {
+    max-width: 520px;
+  }
+
+@include phone {
+    max-width: 95%;
+    padding: 0 2.5%;
+  }
 }
 
 .wrapper {
@@ -69,5 +91,9 @@ h6 {
   "content"
   "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 80px 1fr 50px;
+  grid-template-rows: 80px 1fr 100%;
+
+@include phone {
+    min-width: 320px;
+  }
 }
