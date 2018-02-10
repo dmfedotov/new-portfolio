@@ -1,3 +1,7 @@
 .sidebar {
   grid-area: sidebar;
+
+  @include laptop {
+    grid-area: sidebar main;
+  }
 }
