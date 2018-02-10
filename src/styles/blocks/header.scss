@@ -46,6 +46,7 @@
 
   background: url("../images/decor/border-bottom.png") repeat-x center bottom;
 
+  transition: color 0.3s;
 @include tablet {
     display: none;
   }
